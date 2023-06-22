@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body::selection {
+  background-color: #010f61;
+  ;
+  color: #fff;
+
+}
+
+::selection {
+  background: #010f61;
+  color: #fff;
+}
+
+.relative {
+  overflow: hidden;
+}
+
+.overlay {
+  transition: width 1s;
+  overflow: hidden;
+  height: 100%;
+}
+
+.w-card:hover {
+  .overlay {
+    width: 100%;
+    /* transform: rotate(360deg); */
+  }
+}
+
+.resume {
+  position: relative;
+}
+
+.timeline {
+
+  .event {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      box-shadow: 0 0 0 4px #28e98c;
+      left: -54.85px;
+      background: #313534;
+      border-radius: 50%;
+      height: 11px;
+      width: 11px;
+      top: 8px;
+      content: "";
+    }
+  }
+
+  top: 5px;
+}
+
+.slick-prev,
+.slick-next {
+  left: 0;
+  bottom: -41px;
+  top: unset !important;
+}
+
+.slick-next {
+  left: 20px;
+}
+
+.slick-next,
+.slick-before {
+  &:before {}
+}
+
+.navbar .active {
+  background: #000;
+
+}
+
+.nav-links {
+  // display: none;
+  transition: ease-in-out all 0.2s;
+  transform: translateX(42px);
+}
+
+@media (max-width:1200px) {
+  input:checked~.nav-links {
+    // display: flex;
+    width: 320px;
+    transition: ease-in-out all 0.2s;
+    transform: translateX(0);
+  }
+}
+
+li {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+      top: -22px;
+      // background-color: aqua;
+    }
+  }
+}
+
+.tooltip {
+  top: 0;
+  position: absolute;
+  opacity: 0;
+  left: -10px;
+  width: 80px;
+  margin: auto;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &::after {
+    content: "";
+    top: 25px;
+    left: 50%;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+
+}
