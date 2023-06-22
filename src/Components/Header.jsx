@@ -28,7 +28,6 @@ const Header = () => {
             </p>
           </div>
         </div>
-        {/* <img src={img} alt="" className='w-[35rem]' /> */}
       </div>
 
     </div>
