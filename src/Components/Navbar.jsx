@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { FaBook, FaEnvelope, FaHamburger, FaHome, FaSuitcase, FaTimes, FaUser } from 'react-icons/fa'
-import AboutMe from './AboutMe';
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);

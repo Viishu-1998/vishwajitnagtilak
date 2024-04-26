@@ -1,8 +1,5 @@
 import React from 'react'
 import { FaSuitcase } from 'react-icons/fa'
-// import React from "react";
-import Slider from "react-slick";
-import space from "../space.jpg";
 
 
 
